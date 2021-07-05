@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tugas web dasar pertemuan 13</title>
+</head>
+
+<body>
+
+    <center>
+        <form>
+            <label>Input Angka</label> <br>
+            <input type="text" id="angka"> <br> <br>
+            <button type="button" onclick="hitung()">Tampilkan</button>
+        </form>
+    </center>
+
+    <script>
+        function hitung() { 
+            var n = parseInt(document.getElementById('angka').value);
+            
+            for (var i = 1; i <= n; i++) {
+
+                if (i % 15 == 0) {
+                    document.write('WEB, ');
+                } else if (i % 5 == 0) {
+                    document.write('UNINDRA, ');
+                } else if (i % 3 == 0) {
+                    document.write('TI, ');
+                } else {
+                    document.write(i + ', ');
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

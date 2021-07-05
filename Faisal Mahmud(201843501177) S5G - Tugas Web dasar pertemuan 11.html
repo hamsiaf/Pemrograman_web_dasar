@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Javascript dasar</title>
+    <script> 
+        /*<script> dan tag penutupnya </scrip> untuk membuat script javascript */
+                //contoh 1
+               alert("Selamat Datang"); 
+               //alert("selamat datang"); untuk membuat popup saat halaman web pertama dibuka
+
+               //contoh 2
+               var nama = prompt("Masukan nama Anda ?"); //membuat varibel nama untuk menyimpan nilai pada pupup input
+               document.write("<h1>Welcome, "+ nama + " </h1>") //lalu ditampilkan pada halaman html dengan menggunakan tag <h1> (menyisipkan tag html di javascript)
+    </script>
+</head>
+
+<body>
+
+    <!-- contoh 3 -->
+    <button onclick="alert('Hallo, '+nama)">Klik ini</button>
+    <!-- menampilkan popup halo, nama  pada alert('Halo, '+nama) variable nama berisi nama yang sudah di input pada popup -->
+    <br> <br>
+
+
+    <!-- contoh 4 -->
+    <h2 id="tulisan">klik tombol di bawah untuk merubah tulisan mejadi hujau</h2>
+    <input type="button" value="klik ini untuk merubah warna tulisan diatas ini menjadi hijau" onclick="document.getElementById('tulisan').style.color='green'">
+    <!-- document.getElementById('tulisan').style.color='red' 
+    merubah warna tulisan menjadi merah pada tag <h2> yang diberi id="tulisan" -->
+    <br> <br>
+
+
+    <!-- contoh 5 -->
+    <input type="button" value="klik tombol ini 2 kali untuk merubah warna background menjadi biru" ondblclick="document.bgColor='blue'">
+    <!-- ondbclick="document.bgColor='blue'"" merubah warna background halaman menjadi putih saat tombol button diklik dua kali -->
+    <br> <br>
+
+    
+   
+    <input type="button" value="Simpan" onclick="confirm('Simpan atau tidak ?')">
+    <!-- onclick="confirm('Simpan atau tidak')
+        saat tombol diklik akan menampilkan popup pertanyaan konfirmasi ya atau tidak"  -->
+    <br> <br>
+
+
+    
+    <h2 id="nama" onmouseover="style.color='salmon'" onmouseout="style.color='black'">dalam satu minggu ada 7 hari, 
+        dalam sebulan kurang lebih ada 30 hari.
+         jumlah hari dalam setahun kurang lebih 365 hari 52 minggu 12 bulan dalam kalender Masehi. </h2>
+    <!--onmouseover="style.color='salmon'" saat kursor berada di tulisan
+    Tulisan berwarna salmon, dan onmouseout="style.color='black'" tulisan berwarna hitam saat kursor sudah tidak berada di tulisan  -->
+
+</body>
+
+</html>

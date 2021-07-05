@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tugas Web Dasar Pertemuan 10</title>
+
+    <style>
+        .logo {
+            width: 220px;
+            height: 150px;
+            float: left; 
+            margin-left: 20px;
+            position: absolute; 
+        }
+
+        .judul_hal,
+        .alamat {
+            text-align: center;
+        }
+
+        .garis {
+            clear: both; 
+            height: 5px;
+            background: blue;
+        }
+
+        #judul_form {
+            text-align: center;
+        }
+
+        .tabel_form {
+            margin: auto;
+        }
+
+        #input_nama,#input_ttl,#input_telp,#input_email { 
+            width:220px; height:25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <img class="logo"
+        src="http://3.bp.blogspot.com/-9wS-uhRioHo/VJ0fJpOwCEI/AAAAAAAAAqs/jqzJqgnIh6M/s280/Logo%2BUnindra%2BUniversitas%2BIndraprasta%2BPGRI.png"
+        alt="Logo Unindra">
+
+    <h1 class=judul_hal>
+        UNIVERSITAS INDRAPRASTA PGRI <br>
+        (UNINDRA)</h1>
+
+    <h2 class="alamat"><i>JL. Nangka No.58 Tanjung Barat - Jaksel</i></h2>
+
+    <br>
+    <hr class="garis">
+
+    <h2 id="judul_form">BIODATA MAHASISWA</h2>
+
+    <form>
+        <table class="tabel_form">
+            <tr>
+                <td>NAMA</td>
+                <td> : </td>
+                <td><input id="input_nama" type="text"> </td>
+            </tr>
+            <tr>
+                <td>ALAMAT</td>
+                <td> : </td>
+                <td><textarea cols="50" rows="5"></textarea></td>
+            </tr>
+            <tr>
+                <td>TANGGAL LAHIR</td>
+                <td> : </td>
+                <td><input id="input_ttl" type="date"></td>
+            </tr>
+            <tr>
+                <td>TELP</td>
+                <td> : </td>
+                <td><input id="input_telp" type="text"></td>
+            </tr>
+            <tr>
+                <td>EMAIL</td>
+                <td> : </td>
+                <td><input id="input_email" type="text"></td>
+            </tr>
+        </table>
+
+        <center>
+            <input id="simpan" type="submit" value="SIMPAN" onclick="confirm('SIMPAN ?'); alert('Berhasil')">
+            <input id="batal" type="reset" value="BATAL" onclick="alert('BATAL')">
+        </center>
+    </form>
+
+</body>
+
+</html>

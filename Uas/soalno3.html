@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jawaban No.3</title>
+</head>
+<body>
+
+    <form>
+        <h2>Kasir Swalayan</h2>
+    <table>
+        <tr>
+            <td> Masukan Jumlah Shampo</td>
+            <td>: <input id="shampo" type="text"></td>
+        </tr>
+        <tr>
+            <td>Masukan Jumlah Sabun</td>
+            <td>: <input id="sabun" type="text"></td>
+        </tr>
+        <tr>
+            <td>Masukan Jumlah Bedak</td>
+            <td>: <input id="bedak" type="text"></td>
+        </tr>
+        <tr>
+            <td colspan="2"><input type="Submit" value="HITUNG" onclick="hitung()"> <input type="reset"></td>
+        </tr>
+
+    </table>
+
+    <h3 id="tampil"> </h3>
+</form>
+
+    
+    <script>
+        
+        function hitung() {
+            let sampo = 30000;
+            let sabun = 45000;
+            let bedak = 50000;
+            let jml_sampo =parseInt(document.getElementById("shampo").value);
+            let jml_sabun =parseInt(document.getElementById("sabun").value);
+            let jml_bedak =parseInt(document.getElementById("bedak").value);
+            let total_harga = (sampo*jml_sampo)+(sabun*jml_sabun)+(bedak*jml_bedak);
+           
+
+            if (total_harga >= 1000000) {
+               alert('Total Harga = Rp.'+total_harga+'. Akan Mendapatkan Undian Hadiah Berupa Handphone');
+            } else if( total_harga >= 500000 ) {
+                alert('Total Harga = Rp.'+total_harga+'. Akan Mendapatkan Undian Hadiah berupa Dompet');
+            } else if( total_harga >= 100000 ) {
+                alert('Total Harga = Rp.'+total_harga+'. Akan Mendapatkan undian Hadiah berupa Payung');
+            }
+        }
+
+    </script>
+</body>
+</html>

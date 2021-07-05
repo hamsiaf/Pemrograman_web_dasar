@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Tugas web dasar pert.12</title>
+    <style>
+        div {
+            width: 230px;
+            height: 300px;
+            float: left;
+            margin-left: 14px;
+            padding: 10px;
+            border-radius: 3mm;
+            box-shadow: 0px 3px 4px black;
+        }
+
+        label {
+            font-size: 14pt;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form>
+
+        <div style="background:salmon;">
+            <h2 style="text-align: center;">Hitung Volume Balok</h2>
+            <label>Input panjang</label> <br>
+            <input type="text" id="pnjang">
+            <br> <br>
+            <label>Input lebar</label> <br>
+            <input type="text" id="lbar">
+            <br> <br>
+            <label>Input Tinggi</label> <br>
+            <input type="text" id="tiggi_balok">
+            <br> <br>
+            <input type="reset" value="hapus">
+            <button onclick="balok()">Hitung Volume Balok</button>
+        </div>
+
+
+        <div style="background:greenyellow;">
+            <h2 style="text-align: center;">Hitung Volume Tabung</h2>
+            <label>Input Tinggi</label> <br>
+            <input type="text" id="tiggi_tabung">
+            <br> <br>
+            <label>Input Jejari</label> <br>
+            <input type="text" id="jjari_tabung">
+            <br> <br>
+            <input type="reset" value="hapus">
+            <button onclick="tabung()">Hitung Volume Tabung</button>
+        </div>
+
+
+        <div style="background:grey;">
+            <h2 style="text-align: center;">Hitung Volume Bola</h2>
+            <label>Input Jejari</label> <br>
+            <input type="text" id="jjari_bola">
+            <br> <br>
+            <input type="reset" value="hapus">
+            <button onclick="bola()">Hitung Volume Bola</button>
+        </div>
+
+
+        <div style="background:aqua;">
+            <h2 style="text-align: center;">Hitung Volume Prisma Segitiga</h2>
+            <label>Input Tinggi Alas</label> <br>
+            <input type="text" id="t_alas">
+            <br> <br>
+            <label>Input Panjang alas</label> <br>
+            <input type="text" id="p_alas">
+            <br> <br>
+            <label>Input Tinggi Prisma</label> <br>
+            <input type="text" id="t_prisma">
+            <br> <br>
+            <input type="reset" value="hapus">
+            <button onclick="prisma()">Hitung Volume Prisma</button>
+        </div>
+
+
+        <div style="background:blueviolet;">
+            <h2 style="text-align: center;">Hitung Volume Kerucut</h2>
+            <label>Input Jejari</label> <br>
+            <input type="text" id="jjari_alas">
+            <br> <br>
+            <label>Input Tinggi Kerucut</label>
+            <input type="text" id="t_kerucut">
+            <br> <br>
+            <input type="reset" value="hapus">
+            <button onclick="kerucut()">Hitung Volume Bola</button>
+        </div>
+
+    </form>
+
+    <script>
+        function balok() {
+            var panjang = parseInt(document.getElementById('pnjang').value);
+            var lebar = parseInt(document.getElementById('lbar').value);
+            var tinggi = parseInt(document.getElementById('tiggi_balok').value);
+            var v = panjang * lebar * tinggi;
+            alert('Volume balok adalah : ' + v);
+        }
+
+        function tabung() {
+            var tinggi = parseInt(document.getElementById('tiggi_tabung').value);
+            var jejari = parseInt(document.getElementById('jjari_tabung').value);
+            var v = 3.14 * jejari * jejari * tinggi;
+            alert('Volume Tabung adalah : ' + v);
+        }
+
+        function bola() {
+            var jejari = parseInt(document.getElementById('jjari_bola').value);
+            var v = 3.14 * jejari * jejari * jejari;
+            alert('Volume Bola adalah : ' + v);
+        }
+
+        function prisma() {
+            var tinggi_alas = parseInt(document.getElementById('t_alas').value);
+            var panjang_alas = parseInt(document.getElementById('p_alas').value);
+            var tinggi_prisma = parseInt(document.getElementById('t_prisma').value);
+            var v = 0.5 * tinggi_alas * panjang_alas * tinggi_prisma;
+            alert('Volume Bola Prisma : ' + v);
+        }
+
+        function kerucut() {
+            var jejari_alas = parseInt(document.getElementById('jjari_alas').value);
+            var tinggi_kerucut = parseInt(document.getElementById('t_kerucut').value);
+            var v = (1 / 3) * 3.14 * jejari_alas * jejari_alas * tinggi_kerucut;
+            alert('Volume Bola Prisma :' + v);
+        }
+    </script>
+
+</body>
+
+</html>

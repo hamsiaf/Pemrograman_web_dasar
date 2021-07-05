@@ -1,0 +1,11 @@
+img {
+    width:200px;
+    height: 200px;
+    float: left; /*agar memposisikan element lain baris dari kiri( agar setelah gambar tidak membuat baris baru)*/
+}
+
+.kartu {
+    margin:auto; /*memposisikan tag div yang class="kartu" agar ketengah*/
+    background: whitesmoke;
+    width:60%;
+}
